@@ -1,0 +1,67 @@
+<resources>
+    <string name="app_name">Star Wars Mobile Games</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_media">Music</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="hello_first_fragment">Hello first fragment</string>
+
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <string name="app_title">Star Wars</string>
+    <string name="people_btn">People Quiz</string>
+    <string name="film_btn">Film Quiz</string>
+    <string name="fight_btn">Fight Arena</string>
+
+    <string name="pref_background_title">Background Mode</string>
+    <string name="pref_background_key">background</string>
+
+    <string name="pref_category_title">Choose Your Side</string>
+
+    <string name="pref_back_entry_light">Light</string>
+    <string name="pref_back_entry_dark">Dark</string>
+
+    <string name="pref_back_val_light" translatable="false">light</string>
+    <string name="pref_back_val_dark" translatable="false">dark</string>
+
+    <string name="pref_back_default">@string/pref_back_val_light</string>
+
+
+    <string name="fight_quiz_title">Fighting Arena</string>
+    <string name="start">Start</string>
+    <string name="choice">Who wins?</string>
+    <string name="versus">VERSUS</string>
+    <string name="beats">BEATS</string>
+    <string name="correct">Correct!</string>
+    <string name="wrong">Wrong!</string>
+    <string name="retry">Retry</string>
+    <string name="Congratulations">Congratulations!</string>
+    <string name="fight_quiz_score">Score: %1$s</string>
+
+    <string name="people_quiz_title">Character Knowledge Check</string>
+    <string name="start_the_quiz">Start The Quiz</string>
+
+
+    <string name="settings_title_username">Username</string>
+    <string name="settings_key_username">username</string>
+    <string name="film_quiz_title">Film Quiz</string>
+    <string name="film_quiz_score">Score: %1$s</string>
+    <string name="question_num">Question: %1$d</string>
+    <string name="true_false">True or False?</string>
+    <string name="filmQuestionPart1">The film known as \u0022%1$s\u0022 is known also as episode %2$d!</string>
+    <string name="filmQuestionPart2">The film known as \u0022%1$s\u0022 had the following directors %2$s!</string>
+    <string name="filmQuestionPart3">The film known as \u0022%1$s\u0022 was first released on %2$s!</string>
+
+
+
+    <string name="film_continue">Ready to continue?</string>
+    <string name="continue_on">Continue</string>
+    <string name="thank_you">Thank you for Playing!</string>
+    <string name="replay">replay?</string>
+
+
+
+</resources>

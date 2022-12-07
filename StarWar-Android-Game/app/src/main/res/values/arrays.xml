@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="pref_back_entries">
+        <item>@string/pref_back_entry_light</item>
+        <item>@string/pref_back_entry_dark</item>
+    </string-array>
+
+    <string-array name="pref_back_values">
+        <item>@string/pref_back_val_light</item>
+        <item>@string/pref_back_val_dark</item>
+    </string-array>
+</resources>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/main_fight_view">
+
+        <TextView
+            android:id="@+id/textview_fight_quiz_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fight_quiz_title"
+            android:textSize="50sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/textview_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Score: 0"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textview_fight_quiz_title"/>
+
+        <TextView
+            android:id="@+id/textview_fighter_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Luke Skywalker"
+            android:textSize="20sp"
+            android:layout_marginTop="50sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textview_score"/>
+
+        <TextView
+            android:id="@+id/textview_versus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/versus"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textview_fighter_one"/>
+
+        <TextView
+            android:id="@+id/textview_fighter_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Darth Vader"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textview_versus"/>
+
+        <ImageView
+            android:id="@+id/imageview_fighter_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/textAppearanceHeadline5"
+            android:layout_marginTop="80sp"
+            android:layout_marginLeft="20sp"
+            app:layout_constraintTop_toBottomOf="@id/textview_fighter_two"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <ImageView
+            android:id="@+id/imageview_fighter_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/textAppearanceHeadline5"
+            android:layout_marginTop="80sp"
+            android:layout_marginRight="20sp"
+            app:layout_constraintTop_toBottomOf="@id/textview_fighter_two"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/textview_choose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/choice"
+            android:textSize="30sp"
+            android:layout_marginLeft="20sp"
+            android:layout_marginBottom="10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/barrier1"/>
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:barrierDirection="end"
+            app:layout_constraintBottom_toTopOf="@id/button_fighter_one"/>
+
+        <Button
+            android:id="@+id/button_fighter_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Luke Skywalker"
+            android:layout_marginLeft="20sp"
+            android:layout_marginBottom="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <Button
+            android:id="@+id/button_fighter_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Darth Vader"
+            android:layout_marginRight="20sp"
+            android:layout_marginBottom="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+    android:id="@+id/tv_search_error"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:textAppearance="?attr/textAppearanceBody1"
+    android:textColor="?attr/colorError"
+    android:visibility="invisible"
+    android:text="ERROR, Most likely couldn't connect with Star Wars API" />
+        <!--CircularProgressIndiicator copied directly from https://github.com/osu-cs492-w22/MultiActivityGitHubSearch/blob/main/app/src/main/res/layout/activity_main.xml-->
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+    android:id="@+id/loading_indicator"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:indeterminate="true"
+    android:layout_marginTop="32dp"
+    android:layout_gravity="top|center_horizontal"
+    android:visibility="invisible" />
+</FrameLayout>

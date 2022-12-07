@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.PeopleQuizActivity"
+        android:id="@+id/main_people_quiz_view">
+
+        <TextView
+            android:id="@+id/tv_people_quiz_main_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/textAppearanceHeadline4"
+            android:paddingTop="5dp"
+            android:paddingHorizontal="3dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:gravity="center_horizontal"
+            android:text="@string/people_quiz_title" />
+
+        <TextView
+            android:id="@+id/tv_get_right_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:text="Correct: 0"
+            android:textSize="25sp"
+            android:textColor="#28ED19"
+            app:layout_constraintEnd_toStartOf="@id/tv_get_wrong_num"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_people_quiz_main_title"/>
+        <TextView
+            android:id="@+id/tv_get_wrong_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:text="Wrong: 0"
+            android:textSize="25sp"
+            android:textColor="#97152F"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toEndOf="@id/tv_get_right_num"
+            app:layout_constraintTop_toBottomOf="@id/tv_people_quiz_main_title"/>
+
+
+
+        <TextView
+            android:id="@+id/tv_question_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Is blue the eye color of Luke Skywalker?"
+            android:gravity="center_horizontal"
+            android:textSize="35sp"
+            android:layout_marginTop="90sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_get_right_num"/>
+        <Button
+            android:id="@+id/button_choice_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="True"
+            android:layout_marginLeft="20sp"
+            android:layout_marginBottom="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <Button
+            android:id="@+id/button_choice_wrong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="False"
+            android:layout_marginRight="20sp"
+            android:layout_marginBottom="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+            android:id="@+id/tv_search_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:textAppearance="?attr/textAppearanceBody1"
+            android:textColor="?attr/colorError"
+            android:visibility="invisible"
+            android:text="ERROR, Most likely couldn't connect with Star Wars API" />
+        <!--CircularProgressIndiicator copied directly from https://github.com/osu-cs492-w22/MultiActivityGitHubSearch/blob/main/app/src/main/res/layout/activity_main.xml-->
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/loading_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:layout_marginTop="32dp"
+            android:layout_gravity="top|center_horizontal"
+            android:visibility="invisible" />
+</FrameLayout>
